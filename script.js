@@ -18,7 +18,7 @@ async function start() {
   // load bộ test 
   const labeledFaceDescriptors = await loadLabeledImages()
    //0.6 = 60% độ giống trong khuôn mặt
-  const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
+  const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.7)
   
 
 
@@ -64,7 +64,8 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  const labels = ['Black Widow', 'Captain America', 'Captain Marvel', 'Hawkeye', 'Jim Rhodes','Linh','Phèn','Thiện','Thor', 'Tony Stark']
+  const labels = ['Black Widow', 'Captain America', 'Captain Marvel','H Cường','Hawkeye','Hiếu','Hưng','Huy',
+  'Jim Rhodes','Linh','Lộc','Long','Nam','Nhơn','Phèn','Phong','Thi','Thiện','Thor', 'Tony Stark','Trường','Tùng','Vĩ']
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
